@@ -1,2 +1,2 @@
 # code_review
-code review practice
+code review practice. First use for Git hub
