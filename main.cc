@@ -30,6 +30,18 @@ int main(int argc, char* argv[]){
 	pushQueue(&priQueue,598);
 	pushQueue(&priQueue,302);
 
+        if (argc <= 1){
+		customNumber = -1;
+	} else {
+		customNumber = atoi(argv[1]);
+		if( customNumber <= 0  || customNumber >= 2000 ){
+			customNumber = -1;
+		}
+	}
+	
+	pushQueue(&priQueue,customNumber);
+	
+	/* Keep the code for history 
 	if( argc > 1 ){
 		customNumber = atoi(argv[1]);
 		if( customNumber > -500 && customNumber < 2000 ){
@@ -42,6 +54,7 @@ int main(int argc, char* argv[]){
 	else{
 		pushQueue(&priQueue,-1);
 	}
+	*/
 
 	//empty & size
 	if(priQueue.empty()){
