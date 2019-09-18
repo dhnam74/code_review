@@ -30,10 +30,18 @@ TEST(PriorityQueueTest,Trivial){
 	expTarget.pop();
 	expTarget.pop();
 	
+	//Test 4 - Push 3 Data
+	expTarget.push(-3);
+	expTarget.push(-8);
+	expTarget.push(-5);
+	
 	ASSERT_EQ(expTarget.top(),3);
-	ASSERT_EQ(expTarget.size(),3);
+	ASSERT_EQ(expTarget.size(),6);
 	ASSERT_FALSE(expTarget.empty());
 
+	expTarget.pop();
+	expTarget.pop();
+	expTarget.pop();
 	expTarget.pop();
 	expTarget.pop();
 	expTarget.pop();
